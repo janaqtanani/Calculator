@@ -1,0 +1,151 @@
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="css/layout.css" media="screen" type="text/css" />
+    </head>
+    
+    <body>
+        <table align="center" >
+ <tr>
+                <td colspan="7">
+                    <input type="text" id="result" value=""  />
+                </td>
+</tr>
+ <tr>
+         <td  colspan="2"> 
+              <input type="button" name="operator" value="Rad|Deg" style="width: 90%;">
+            </td>                
+            <td>
+                <input  type="button" name="operator" value="x!" onclick="set('x!')" />
+            </td>
+            <td>
+                <input  type="button" name="operator" value="(" onclick="set('(')" />
+            </td>
+            <td>
+                <input  type="button" name="operator" value=")" onclick="set(')')" />
+            </td>
+            <td>
+                <input  type="button" name="operator" value="%" onclick="set('%')"/>
+            </td>
+                <td>
+                    <input type="button" name="operator" value="AC"  onclick="del()">
+                </td>
+ </tr>
+
+ <tr>
+                
+                <td>
+                    <input type="button" name="operator" value="lnv" onclick="set('lnv')">
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="sin" onclick="sine()" />
+
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="ln" onclick="set('ln')" />
+                </td>
+               
+                
+                <td>
+                    <input  type="button" value="7" onclick="set('7')" />
+                </td>
+                <td>
+                    <input  type="button" value="8" onclick="set('8')" />
+                </td>
+                <td>
+                    <input  type="button" value="9" onclick="set('9')" />
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="÷" onclick="set('/')" />
+                </td>
+</tr>
+<tr>
+                <td>
+                    <input  type="button" name="operator" value="π" onclick="set('3.14')" />
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="cos" onclick="cosine()" />
+                </td>
+                <td>
+                    <input id="btnLog" type="button" name="operator" value="log" onclick="set('log')" />
+                </td>
+                
+                
+                <td>
+                    <input  type="button" value="4" onclick="set('4')" />
+                </td>
+                <td>
+                    <input  type="button" value="5" onclick="set('5')" />
+                </td>
+                <td>
+                    <input  type="button" value="6" onclick="set('6')" />
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="×" onclick="set('*')" />
+                </td>
+</tr>
+<tr>
+
+                <td>
+                    <input type="button" name="operator" value="e" onclick="set('e')">
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="tan" onclick="tang()" />
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="√" onclick="sqr()" />
+                </td>
+                
+                <td>
+                    <input  type="button" value="1" onclick="set('1')" />
+                </td>
+                <td>
+                    <input  type="button" value="2" onclick="set('2')" />
+                </td>
+                <td>
+                    <input  type="button" value="3" onclick="set('3')" />
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="-" onclick="set('-')" />
+                </td>
+</tr>
+<tr>
+                <td>
+                    <input  type="button" name="operator" value="Ans" onclick="set('Ans')"/>
+                </td>
+                <td>
+                    <input type="button" name="operator" value="EXP" onclick="set('EXP')">
+                </td>
+                <td>
+                    <input type="button" name="operator" value="x^y">
+                </td>
+                <td>
+                    <input  type="button" value="0" onclick="set('0')" />
+                </td>
+                <td>
+                    <input  type="button" value="." />
+                </td>
+                <td>
+                    <input  type="button" name="equal" value="=" onclick="answer()" />
+                </td>
+                <td>
+                    <input  type="button" name="operator" value="+" onclick="set('+')" />
+                </td>
+        </table>
+        <script src="cal.js"></script>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
