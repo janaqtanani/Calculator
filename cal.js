@@ -139,7 +139,7 @@ for(let i=0;i<arr.length;i++){
    number1+=v       
  }
  v="";
- for(let i=document.getElementById("result").value.indexOf("+")+1;i<document.getElementById("result").value.length && v!="-"&&v!="*"&&v!="/"&&v!="+"&&v!="^";i++)
+ for(let i=document.getElementById("result").value.indexOf("-")+1;i<document.getElementById("result").value.length && v!="-"&&v!="*"&&v!="/"&&v!="+"&&v!="^";i++)
   {
    v=document.getElementById("result").value.charAt(i); 
    number2+=v       
@@ -147,7 +147,7 @@ for(let i=0;i<arr.length;i++){
  n1=parseInt(number1);
  n2=parseInt(number2);
  output=n1-n2;
- arr[document.getElementById("result").value.indexOf("+")]=output;
+ arr[document.getElementById("result").value.indexOf("-")]=output;
 }
   }
 }
@@ -162,7 +162,7 @@ function power(){
 }
 while(document.getElementById("result").value.indexOf("^")>0){
 for(let i=0;i<arr.length;i++){
-  if(arr[i]=="+"){
+  if(arr[i]=="^"){
     counter++;
     if(counter>1||arr[i]=="-"||arr[i]=="*"||arr[i]=="/"||arr[i]=="^"){
       break;
