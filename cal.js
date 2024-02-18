@@ -1,8 +1,4 @@
-function display(o) {
-
-  document.getElementById("result").value += o;
-  
-}
+/*
 let arr1 = [];
 let arr = [];
 let counter = 0;
@@ -191,9 +187,7 @@ for(let i=0;i<arr.length;i++){
 return output;
 }
 
-function del(){
-  document.getElementById("result").value="";
-}
+
 
 
 
@@ -233,55 +227,123 @@ let content2="";
 function printOut(){
 equal();
 document.getElementById("result").value=document.getElementById("result").value+"="+output;
+}*/
+
+
+
+
+function del(){
+  document.getElementById("result").value="";
+}
+
+
+function display(o) {
+  document.getElementById("result").value += o;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function answer() {
+function answer() {
     var Exp = document.getElementById("result");
     var Exp1 = Exp.value;
     var result = eval(Exp1);
     Exp.value = result;
 }
 
-*/
+/*
 
+function appendToDisplay(value) {
+  document.getElementById('display').value += value;
+}
 
+function clearDisplay() {
+  document.getElementById('display').value = '';
+}
+
+function calculateResult() {
+  let input = document.getElementById('display').value;
+  let result;
+
+  try {
+      result = evaluateExpression(input);
+  } catch (error) {
+      result = 'Error';
+  }
+
+  document.getElementById('display').value = result;
+}
+
+function evaluateExpression(expression) {
+  const operators = {
+      '+': (a, b) => a + b,
+      '-': (a, b) => a - b,
+      '*': (a, b) => a * b,
+      '/': (a, b) => a / b,
+      '^': (a, b) => Math.pow(a, b)
+  };
+
+  const precedence = {
+      '+': 1,
+      '-': 1,
+      '*': 2,
+      '/': 2,
+      '^': 3
+  };
+
+  function tokenize(expression) {
+      return expression
+          .replace(/\s+/g, '')
+          .match(/(\d+|\(|\)|\+|-|\*|\/|\^)/g);
+  }
+
+  function shuntingYard(tokens) {
+      const outputQueue = [];
+      const operatorStack = [];
+
+      for (const token of tokens) {
+          if (/\d/.test(token)) {
+              outputQueue.push(parseFloat(token));
+          } else if (token === '(') {
+              operatorStack.push(token);
+          } else if (token === ')') {
+              while (operatorStack.length && operatorStack[operatorStack.length - 1] !== '(') {
+                  outputQueue.push(operatorStack.pop());
+              }
+              operatorStack.pop(); // Discard the '('
+          } else {
+              while (operatorStack.length && precedence[token] <= precedence[operatorStack[operatorStack.length - 1]]) {
+                  outputQueue.push(operatorStack.pop());
+              }
+              operatorStack.push(token);
+          }
+      }
+
+      while (operatorStack.length) {
+          outputQueue.push(operatorStack.pop());
+      }
+
+      return outputQueue;
+  }
+
+  function evaluateRPN(tokens) {
+      const stack = [];
+
+      for (const token of tokens) {
+          if (/\d/.test(token)) {
+              stack.push(parseFloat(token));
+          } else {
+              const operand2 = stack.pop();
+              const operand1 = stack.pop();
+              stack.push(operators[token](operand1, operand2));
+          }
+      }
+
+      return stack.pop();
+  }
+
+  const tokens = tokenize(expression);
+  const rpnTokens = shuntingYard(tokens);
+  return evaluateRPN(rpnTokens);
+}*/
 
 
