@@ -345,5 +345,60 @@ function evaluateExpression(expression) {
   const rpnTokens = shuntingYard(tokens);
   return evaluateRPN(rpnTokens);
 }*/
+/*function add(x, y) {
+   return x + y;
+}
+
+function subtract(x, y) {
+   return x - y;
+}
+
+function multiply(x, y) {
+   return x * y;
+}
+
+function divide(x, y) {
+   if (y === 0) {
+       return "Error: Division by zero!";
+   }
+   return x / y;
+}
+
+function calculate(expression) {
+   // Split the expression into tokens (numbers and operators)
+   const tokens = expression.match(/(\d+|\+|\-|\*|\/)/g);
+   
+  
+   const stack = [];
+   
+   // Loop through tokens and perform operations according to PEMDAS/BODMAS
+   for (let token of tokens) {
+       if (token === '+' || token === '-' || token === '*' || token === '/') {
+           // If token is an operator, pop last two numbers from stack, perform operation, and push result back to stack
+           const y = stack.pop();
+           const x = stack.pop();
+           switch (token) {
+               case '+':
+                   stack.push(add(x, y));
+                   break;
+               case '-':
+                   stack.push(subtract(x, y));
+                   break;
+               case '*':
+                   stack.push(multiply(x, y));
+                   break;
+               case '/':
+                   stack.push(divide(x, y));
+                   break;
+           }
+       } else {
+           // If token is a number, push it to the stack
+           stack.push(parseFloat(token));
+       }
+   }
+   
+   // The final result will be the only element remaining in the stack
+   return stack[0];
+}*/
 
 
